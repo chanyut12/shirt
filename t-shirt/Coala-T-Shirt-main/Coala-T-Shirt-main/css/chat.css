@@ -1,0 +1,160 @@
+.chat {
+    position: relative;
+    width: 50%;
+    height: max-content;
+    display: block;
+    border-radius: 15px;
+    margin: 5vh auto;
+
+
+    @media (max-width: 750px) {
+        width: 95%;
+        height: 100vh;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 450px) {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
+.chat-header {
+    width: 100%;
+    background-color: cornflowerblue;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    & h3.shop-name {
+        font-size: 24px;
+        margin: 0;
+        width: 80%;
+
+        /* Text Overflow Save */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    & .shop-chat-logo {
+        width: 45px;
+        height: 45px;
+        background-color: slateblue;
+        border-radius: 50%;
+    }
+
+    @media (max-width: 450px) {
+        padding: 15px;
+        gap: 25px;
+
+        & h3.shop-name {
+            font-size: 18px;
+        }
+    }
+}
+
+.chat-space {
+    height: 70vh;
+    width: 100%;
+    background-color: #eee;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+    gap: 25px;
+    padding: 20px;
+    overflow-y: auto;
+
+
+    @media (max-width: 450px) {
+        /* height: calc(); */
+        height: calc(100vh - 135px);
+    }
+}
+
+.text-group {
+    min-height: fit-content;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    gap: 10px;
+
+    & .user-logo,
+    & .shop-logo {
+        width: 40px;
+        height: 40px;
+        background-color: tomato;
+        border-radius: 50%;
+    }
+
+    & .shop-logo {
+        background-color: slateblue;
+    }
+
+    & span.text {
+        background-color: #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        max-width: 70%;
+    }
+}
+
+.sender-me {
+    flex-direction: row-reverse;
+}
+
+.sender-shop {
+    flex-direction: row;
+}
+
+.send-text {
+    /* position: absolute;
+    bottom: 0; */
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background-color: #ddd;
+}
+
+input#sending-text-input {
+    bottom: 0;
+    height: 30px;
+    width: 90%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+button#send-text-btn {
+    border-radius: 50%;
+    background-color: #fff;
+    /* background-color: royalblue; */
+    border: .2px solid #eee;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 15px;
+    top: 15px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & i {
+        color: royalblue;
+        /* color: #fff; */
+        font-size: 24px;
+    }
+}

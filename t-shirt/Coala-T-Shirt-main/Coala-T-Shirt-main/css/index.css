@@ -1,0 +1,279 @@
+.main {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 5% 5%;
+
+    gap: 10%;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+.main .shirt-preview,
+.main .shirt-option {
+    width: 45%;
+
+    @media (max-width: 750px) {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+.shirt-preview {
+    position: relative;
+
+    .display {
+        background-color: blueviolet;
+        width: 100%;
+        height: 300px;
+    }
+
+    .abc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+
+    .a,
+    .b,
+    .c {
+        width: 120px;
+        height: 60px;
+        background-color: aquamarine;
+    }
+}
+
+.shirt-option {
+    position: relative;
+    padding: 20px;
+
+    & form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+        padding: 10px;
+    }
+}
+
+.input-row-group {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    gap: 15px;
+    height: fit-content;
+
+    @media (max-width: 450px) {}
+}
+
+.radio-group {
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+label {
+    font-size: 16px;
+
+    @media (max-width: 450px) {
+        font-size: 14px;
+    }
+}
+
+.radio-group input[type="radio"] {
+    position: absolute;
+    appearance: none;
+
+    &:is(:focus, :checked)+label.radio-label::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        border: .2px solid #555;
+    }
+}
+
+.radio-group label.radio-label {
+    position: relative;
+
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #eee;
+    user-select: none;
+
+    @media (max-width: 450px) {
+        margin: 0;
+        padding: 5px 10px;
+    }
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+
+.input-row-group input[type="number"] {
+    border-radius: 5px;
+    border: solid .2px #333;
+    height: 50px;
+    width: 70px;
+    padding: 10px;
+
+    font-size: 30px;
+    text-align: center;
+
+    @media (max-width: 450px) {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+.input-row-group input[type="number"]:focus,
+.input-row-group input[type="number"]:active {
+    border: solid .2px #333;
+}
+
+.input-row-group .count-btn {
+    width: 50px;
+    /* height: 50px; */
+    aspect-ratio: 1/1;
+    background-color: #fff;
+    border: solid .2px #333;
+    border-radius: 12px;
+    font-size: 30px;
+    font-weight: 300;
+
+    @media (max-width: 450px) {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+    }
+}
+
+.count-input {
+    justify-content: center
+}
+
+button[type="button"]:hover {
+    cursor: pointer;
+}
+
+.cart-buy-group {
+    justify-content: space-between;
+}
+
+.cart-btn,
+.buy-now-btn {
+    width: 45%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.cart-btn {
+    border: none;
+    background-color: #eee;
+}
+
+
+.buy-now-btn {
+    border: none;
+    background-color: royalblue;
+    color: #fff;
+}
+
+.shirt-detail {
+    width: 100%;
+    padding: 50px 150px;
+
+    @media (max-width: 450px) {
+        padding: 25px;
+    }
+}
+
+.shirt-detail>table {
+    table-layout: fixed;
+    width: 100%;
+    position: relative;
+    border-collapse: collapse;
+
+
+    & tr,
+    & td {
+        border: solid .2px #333;
+    }
+
+    & tr:nth-child(2n) {
+        background-color: #eee;
+    }
+
+    & th,
+    & td {
+        padding: 10px;
+    }
+
+    & th {
+        width: 30%;
+    }
+
+}
+
+.shop {
+    position: relative;
+    width: 100%;
+    padding-block: 50px;
+    padding-inline: clamp(10px, 20%, 10vw);
+}
+
+.shop-about {
+    background-color: palegreen;
+    border-radius: 40px;
+    padding: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    flex-direction: row;
+
+    & .shop-logo {
+        width: clamp(100px, 10%, 250px);
+        height: 100%;
+        aspect-ratio: 1/1;
+        background-color: royalblue;
+        border-radius: 50%;
+    }
+}
+
+
+.shop-info {
+    width: 85%;
+
+    & h3 {
+        font-size: 24px;
+    }
+}

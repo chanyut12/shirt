@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirt Option</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/shirt-option.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo-group">
+            <h2 class="coala">COALA co.</h2>
+            <ul class="nav-link">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">support</a></li>
+            </ul>
+        </div>
+        <div>
+            <input type="text" id="search-bar">
+            <ul class="nav-link">
+                <li id="sign-in"><a href="">sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="option">
+            <div class="shirt-preview">
+                <img src="../image/t-shirt.png" alt="T-shirt-Preview">
+            </div>
+            <div class="shirt-option">
+                <form id="shirt-option-parts">
+                    <!-- Form: Part 1 -->
+                    <div class="option-part current-part" id="step-1">
+                        <h4 class="progress"><span>Step 1 of 2</span> : Product Design</h4>
+                        <h1 class="product-name">Product Name</h1>
+                        <div class="input-row-group">
+                            <span class="option-name">Fabric</span>
+                            <div class="radio-group">
+                                <input type="radio" name="fabric" value="Cotton" id="fabric-Cotton">
+                                <label for="fabric-Cotton" class="radio-label">Cotton</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="fabric" value="Polyester" id="fabric-Polyester">
+                                <label for="fabric-Polyester" class="radio-label">Polyester</label>
+                            </div>
+                        </div>
+                        <div class="input-row-group">
+                            <span class="option-name">Neckline</span>
+                            <div class="radio-group">
+                                <input type="radio" name="neckline" value="Crew-neck" id="neckline-Crew">
+                                <label for="neckline-Crew" class="radio-label">Crew neck</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="neckline" value="V-neck" id="neckline-V">
+                                <label for="neckline-V" class="radio-label">V-neck</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="neckline" value="Scoop-neck" id="neckline-Scoop">
+                                <label for="neckline-Scoop" class="radio-label">Scoop neck</label>
+                            </div>
+                        </div>
+                        <div class="input-row-group">
+                            <span class="option-name">Sleeve length</span>
+                            <div class="radio-group">
+                                <input type="radio" name="sleeve" value="Sleeveless" id="sleeve-Less">
+                                <label for="sleeve-Less" class="radio-label">Sleeveless</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="sleeve" value="Short-sleeves" id="sleeve-Short">
+                                <label for="sleeve-Short" class="radio-label">Short sleeves</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="sleeve" value="Long-sleeves" id="sleeve-Long">
+                                <label for="sleeve-Long" class="radio-label">Long sleeves</label>
+                            </div>
+                        </div>
+                        <div class="input-row-group">
+                            <span class="option-name">Fit</span>
+                            <div class="radio-group">
+                                <input type="radio" name="fit" value="Slim-fit" id="fit-Slim">
+                                <label for="fit-Slim" class="radio-label">Slim fit</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="fit" value="Regular-fit" id="fit-Regular">
+                                <label for="fit-Regular" class="radio-label">Regular fit</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="fit" value="Long-sleeves" id="fit-Long">
+                                <label for="fit-Long" class="radio-label">Oversized</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form: Part 2 -->
+                    <div class="option-part" id="step-2">
+                        <h4 class="progress"><span>Step 2 of 2</span> : Product Design</h4>
+                        <h1 class="product-name">Product Name</h1>
+                        <div class="input-row-group">
+                            <span class="option-name">Fit</span>
+                            <div class="radio-group">
+                                <input type="radio" name="fit" value="Slim-fit" id="fit-Slim">
+                                <label for="fit-Slim" class="radio-label">Slim fit</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="fit" value="Regular-fit" id="fit-Regular">
+                                <label for="fit-Regular" class="radio-label">Regular fit</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="fit" value="Long-sleeves" id="fit-Long">
+                                <label for="fit-Long" class="radio-label">Oversized</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <div class="step-btn-group">
+                    <button type="button" id="prev-step-btn">Back</button>
+                    <button type="button" id="next-step-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/shirt-option.js"></script>
+</body>
+
+</html>

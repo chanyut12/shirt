@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
+
+.size
+{
+    width: 20%;
+    height: 20%;
+    align-items: center;
+}
+
+.col h4 a
+{
+    color: #03a9f4;    
+}
